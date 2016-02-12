@@ -9,9 +9,12 @@ class Post(models.Model):
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
 	
-	def publish(self):
+	def pulish(self):
 		self.published_date = timezone.now()
 		self.save()
 		
 	def _str_(self):
-		return self.title
+		return self.title		
+		
+		
+		
